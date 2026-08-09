@@ -33,7 +33,7 @@ export function Sobre() {
             kicker="Nossa história"
             id="sobre-titulo"
             titulo="Podrão de esquina com alma de bistrô."
-            alinhamento="esquerda"
+
           />
           <div className="mt-6 space-y-4 text-base text-creme/85">
             <p>
