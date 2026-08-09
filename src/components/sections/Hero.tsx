@@ -22,7 +22,7 @@ export function Hero() {
         width={1600}
         height={1200}
         className={cn(
-          "absolute inset-0 z-0 size-full object-cover object-center",
+          "absolute inset-0 z-0 size-full object-cover object-[50%_40%]",
           !reduzido && "anim-zoom-chapa",
         )}
       />
