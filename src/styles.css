@@ -5,17 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * Design system — PODRÃO CHIC
+ * Dark por padrão. Todas as cores em oklch (equivalentes aos hex da marca).
+ * asfalto #121110 · asfalto-2 #1C1A18 · mostarda #FFC01F · brasa #E5342A
+ * acai #6B2FA0 · creme #F7F2E7 · dourado #C9A227 · fumaca #8B8377
  */
 
 @theme inline {
@@ -26,6 +19,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -46,90 +40,56 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Cores da marca */
+  --color-asfalto: var(--asfalto);
+  --color-asfalto-2: var(--asfalto-2);
+  --color-mostarda: var(--mostarda);
+  --color-brasa: var(--brasa);
+  --color-acai: var(--acai);
+  --color-creme: var(--creme);
+  --color-dourado: var(--dourado);
+  --color-fumaca: var(--fumaca);
+
+  --font-display: "Anton", "Impact", sans-serif;
+  --font-chic: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-quente: 0 18px 40px -18px rgb(255 192 31 / 0.18);
+  --shadow-quente-lg: 0 28px 60px -20px rgb(255 192 31 / 0.28);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-}
+  --radius: 20px;
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --asfalto: oklch(0.185 0.006 60);
+  --asfalto-2: oklch(0.235 0.008 60);
+  --mostarda: oklch(0.836 0.166 84.5);
+  --brasa: oklch(0.588 0.208 28.5);
+  --acai: oklch(0.416 0.201 302);
+  --creme: oklch(0.962 0.017 88);
+  --dourado: oklch(0.716 0.117 89);
+  --fumaca: oklch(0.61 0.017 82);
+
+  --background: var(--asfalto);
+  --foreground: var(--creme);
+  --card: var(--asfalto-2);
+  --card-foreground: var(--creme);
+  --popover: var(--asfalto-2);
+  --popover-foreground: var(--creme);
+  --primary: var(--mostarda);
+  --primary-foreground: var(--asfalto);
+  --secondary: var(--asfalto-2);
+  --secondary-foreground: var(--creme);
+  --muted: oklch(0.27 0.008 60);
+  --muted-foreground: var(--fumaca);
+  --accent: oklch(0.3 0.01 60);
+  --accent-foreground: var(--creme);
+  --destructive: var(--brasa);
+  --destructive-foreground: var(--creme);
   --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --input: oklch(1 0 0 / 14%);
+  --ring: var(--mostarda);
 }
 
 @layer base {
@@ -137,8 +97,210 @@
     border-color: var(--color-border);
   }
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
+
+  body {
+    background-color: var(--color-asfalto);
+    color: var(--color-creme);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-mostarda);
+    color: var(--color-asfalto);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* Tipografia display */
+@utility font-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.94;
+  font-weight: 400;
+}
+
+@utility font-chic {
+  font-family: var(--font-chic);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+/* Grão sutil + luz de chapa */
+@utility textura-grao {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility luz-chapa {
+  background-image: radial-gradient(
+    120% 70% at 50% -10%,
+    rgb(255 192 31 / 0.14) 0%,
+    rgb(229 52 42 / 0.06) 35%,
+    transparent 70%
+  );
+}
+
+/* Faixa de toldo: listras diagonais mostarda/asfalto */
+@utility faixa-toldo {
+  height: 14px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-mostarda) 0 12px,
+    var(--color-asfalto) 12px 24px
+  );
+  opacity: 0.9;
+}
+
+@utility filete-dourado {
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-dourado),
+    transparent
+  );
+}
+
+@utility scroll-x-snap {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > * {
+    scroll-snap-align: start;
+  }
+}
+
+@utility foco-mostarda {
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-asfalto),
+      0 0 0 4px var(--color-mostarda);
+  }
+}
+
+@utility abaixo-da-dobra {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+@keyframes zoom-chapa {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@utility anim-zoom-chapa {
+  animation: zoom-chapa 20s ease-in-out infinite alternate;
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility anim-marquee {
+  animation: marquee-x 28s linear infinite;
+}
+
+@keyframes girar-selo {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility anim-girar {
+  animation: girar-selo 14s linear infinite;
+}
+
+@keyframes pulso-ponto {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+@utility anim-pulso {
+  animation: pulso-ponto 1.8s ease-in-out infinite;
+}
+
+@keyframes revelar {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility anim-revelar {
+  animation: revelar 0.5s ease-out both;
+}
+
+@keyframes shimmer-x {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@utility anim-shimmer {
+  animation: shimmer-x 1.4s ease-in-out infinite;
 }
