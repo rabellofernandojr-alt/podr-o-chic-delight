@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { siteConfig, type HorarioDia } from "@/data/siteConfig";
 
 function minutos(hhmm: string): number {
-  const [h, m] = hhmm.split(":").map(Number);
-  return h * 60 + m;
+  const partes = hhmm.split(":").map(Number);
+  return (partes[0] ?? 0) * 60 + (partes[1] ?? 0);
 }
 
 export function estaAberto(agora: Date, horarios: readonly HorarioDia[]): boolean {
@@ -41,5 +41,5 @@ export function useIsOpenNow() {
     return () => window.clearInterval(id);
   }, []);
 
-  return { aberto, diaAtual: hoje, fechaEm: siteConfig.horarios[0].fecha };
+  return { aberto, diaAtual: hoje, fechaEm: siteConfig.horarios[0]?.fecha ?? "02:00" };
 }
