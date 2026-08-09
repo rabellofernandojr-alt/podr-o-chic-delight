@@ -76,9 +76,6 @@ function Index() {
         <Header />
 
         <main>
-          <h1 className="sr-only">
-            Podrão Chic — lanchonete e açaí no Recreio dos Bandeirantes
-          </h1>
           <Hero />
           <Marquee />
           <Destaques />
