@@ -22,16 +22,16 @@ export function Hero() {
         width={1600}
         height={1200}
         className={cn(
-          "absolute inset-0 -z-20 size-full object-cover object-center",
+          "absolute inset-0 z-0 size-full object-cover object-center",
           !reduzido && "anim-zoom-chapa",
         )}
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-asfalto via-asfalto/85 to-asfalto/40"
+        className="absolute inset-0 z-[1] bg-gradient-to-t from-asfalto via-asfalto/85 to-asfalto/40"
       />
 
-      <div className="mx-auto w-full max-w-7xl px-4 pb-14 pt-24 sm:px-6 lg:pb-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-14 pt-24 sm:px-6 lg:pb-20">
         <p
           className="anim-revelar text-[11px] font-bold uppercase tracking-[0.28em] text-mostarda"
           style={{ animationDelay: "0ms" }}
