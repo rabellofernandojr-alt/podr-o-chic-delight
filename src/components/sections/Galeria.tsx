@@ -36,13 +36,13 @@ export function Galeria() {
             )}
           >
             <FoodImage
-              src={item.image}
+              src={item.src}
               alt={item.alt}
               tipo={item.tipo}
               className="size-full transition-transform duration-500 group-hover:scale-105"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-asfalto to-transparent p-3 text-xs font-medium text-creme opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              {item.legenda}
+              {item.alt}
             </figcaption>
           </figure>
         ))}
