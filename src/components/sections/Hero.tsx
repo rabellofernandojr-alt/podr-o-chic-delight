@@ -4,6 +4,7 @@ import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/lib/utils";
 import { formatarHora } from "@/lib/format";
+import heroImg from "@/assets/hero-podrao.jpg";
 
 export function Hero() {
   const reduzido = useReducedMotion();
@@ -14,17 +15,20 @@ export function Hero() {
       aria-labelledby="hero-titulo"
       className="textura-grao relative flex min-h-[92svh] items-end overflow-hidden pt-16 lg:pt-20"
     >
-      {/* Fundo: placeholder de foto grande (SUBSTITUIR pela foto real do lanche) */}
-      <div
-        aria-hidden="true"
+      {/* Fundo: SUBSTITUIR por foto real do lanche quando disponível */}
+      <img
+        src={heroImg}
+        alt="Hambúrguer do Podrão Chic na chapa quente"
+        width={1600}
+        height={1200}
         className={cn(
-          "absolute inset-0 -z-10 bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,192,31,0.28),rgba(229,52,42,0.16)_38%,transparent_72%)] bg-asfalto",
+          "absolute inset-0 -z-20 size-full object-cover object-center",
           !reduzido && "anim-zoom-chapa",
         )}
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-asfalto via-asfalto/70 to-transparent"
+        className="absolute inset-0 -z-10 bg-gradient-to-t from-asfalto via-asfalto/85 to-asfalto/40"
       />
 
       <div className="mx-auto w-full max-w-7xl px-4 pb-14 pt-24 sm:px-6 lg:pb-20">
