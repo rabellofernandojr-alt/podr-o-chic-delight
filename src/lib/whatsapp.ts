@@ -5,13 +5,13 @@ export interface ItemPedido {
   nome: string;
   quantidade: number;
   precoUnitario: number;
-  observacao?: string;
+  observacao?: string | undefined;
 }
 
 export interface DadosPedido {
   nomeCliente: string;
   modalidade: "Retirada" | "Entrega";
-  endereco?: string;
+  endereco?: string | undefined;
   itens: ItemPedido[];
   subtotal: number;
 }
