@@ -28,7 +28,7 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-[1] bg-gradient-to-t from-asfalto via-asfalto/85 to-asfalto/40"
+        className="absolute inset-0 z-[1] bg-gradient-to-t from-asfalto via-asfalto/60 to-asfalto/20"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-14 pt-24 sm:px-6 lg:pb-20">
