@@ -14,8 +14,8 @@ export interface CartItem {
   nome: string;
   preco: number;
   quantidade: number;
-  observacao?: string;
-  image?: string;
+  observacao?: string | undefined;
+  image?: string | undefined;
   categoria: MenuItem["categoria"];
 }
 
