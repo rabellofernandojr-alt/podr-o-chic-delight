@@ -64,7 +64,13 @@ export function CartSheet() {
       toast.success("Pedido enviado para o WhatsApp");
     } else {
       toast.error("Não conseguimos abrir o WhatsApp", {
-        description: `Chame no ${siteConfig.whatsapp.numeroExibicao}`,
+        description: `Chame no ${siteConfig.whatsapp.numeroExibicao} — toque para copiar o pedido`,
+        action: {
+          label: "Copiar",
+          onClick: () => {
+            void navigator.clipboard?.writeText(resultado.mensagem);
+          },
+        },
       });
     }
   };
