@@ -13,6 +13,7 @@ import { Sobre } from "@/components/sections/Sobre";
 import { Galeria } from "@/components/sections/Galeria";
 import { Avaliacoes } from "@/components/sections/Avaliacoes";
 import { Localizacao } from "@/components/sections/Localizacao";
+import { WhatsAppFab } from "@/components/common/WhatsAppButton";
 import { siteConfig } from "@/data/siteConfig";
 
 const TITULO = "Podrão Chic — Lanches na chapa e açaí no Recreio";
@@ -90,6 +91,7 @@ function Index() {
 
         <Footer />
         <StickyOrderBar />
+        <WhatsAppFab />
         <CartSheet />
       </div>
     </CartProvider>

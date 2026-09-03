@@ -7,6 +7,7 @@ import { siteConfig } from "@/data/siteConfig";
 interface WhatsAppButtonProps {
   label?: string;
   contexto?: "geral" | "acai";
+  mensagemPersonalizada?: string;
   className?: string;
   children?: React.ReactNode;
 }
@@ -15,12 +16,14 @@ interface WhatsAppButtonProps {
 export function WhatsAppButton({
   label = "Pedir agora",
   contexto = "geral",
+  mensagemPersonalizada,
   className,
   children,
 }: WhatsAppButtonProps) {
+  const mensagem = mensagemPersonalizada ?? mensagemRapida(contexto);
   return (
     <a
-      href={linkWhatsApp(mensagemRapida(contexto))}
+      href={linkWhatsApp(mensagem)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${label} pelo WhatsApp`}

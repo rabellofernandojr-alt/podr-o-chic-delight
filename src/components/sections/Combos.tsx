@@ -61,7 +61,11 @@ export function Combos() {
                 </div>
 
                 <div className="mt-6">
-                  <WhatsAppButton label="Pedir combo" className="w-full sm:w-auto" />
+                  <WhatsAppButton
+                    label="Pedir combo"
+                    mensagemPersonalizada={`Olá! Quero pedir o ${combo.nome} (${formatarPreco(combo.preco)}) no Podrão Chic.`}
+                    className="w-full sm:w-auto"
+                  />
                 </div>
 
                 <div
