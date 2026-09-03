@@ -57,15 +57,15 @@ export const siteConfig = {
     fonte: "iFood",
   },
 
-  /** Horários — valores padrão EDITÁVEIS, precisam ser confirmados. */
+  /** Horários — aberto a partir das 17:00 até as 02:00 */
   horarios: [
-    { dia: 0, label: "Domingo", abre: "18:00", fecha: "02:00" },
-    { dia: 1, label: "Segunda", abre: "18:00", fecha: "02:00" },
-    { dia: 2, label: "Terça", abre: "18:00", fecha: "02:00" },
-    { dia: 3, label: "Quarta", abre: "18:00", fecha: "02:00" },
-    { dia: 4, label: "Quinta", abre: "18:00", fecha: "02:00" },
-    { dia: 5, label: "Sexta", abre: "18:00", fecha: "02:00" },
-    { dia: 6, label: "Sábado", abre: "18:00", fecha: "02:00" },
+    { dia: 0, label: "Domingo", abre: "17:00", fecha: "02:00" },
+    { dia: 1, label: "Segunda", abre: "17:00", fecha: "02:00" },
+    { dia: 2, label: "Terça", abre: "17:00", fecha: "02:00" },
+    { dia: 3, label: "Quarta", abre: "17:00", fecha: "02:00" },
+    { dia: 4, label: "Quinta", abre: "17:00", fecha: "02:00" },
+    { dia: 5, label: "Sexta", abre: "17:00", fecha: "02:00" },
+    { dia: 6, label: "Sábado", abre: "17:00", fecha: "02:00" },
   ] as HorarioDia[],
 
   marquee: "NA CHAPA • ATÉ 2H • RECREIO • AÇAÍ CREMOSO •",

@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
             postalCode: siteConfig.endereco.cep,
             addressCountry: siteConfig.endereco.pais,
           },
-          openingHours: "Mo-Su 18:00-02:00",
+          openingHours: "Mo-Su 17:00-02:00",
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",

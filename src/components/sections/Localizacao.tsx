@@ -47,7 +47,7 @@ export function Localizacao() {
               />
               {aberto ? "Aberto agora" : "Fechado agora"}
             </span>
-            <p className="mt-3 text-sm text-fumaca">{aberto ? `Fechamos às ${formatarHora(fechaEm)}` : `Abrimos às ${formatarHora(siteConfig.horarios[0]?.abre ?? "18:00")}`}</p>
+            <p className="mt-3 text-sm text-fumaca">{aberto ? `Fechamos às ${formatarHora(fechaEm)}` : `Abrimos às ${formatarHora(siteConfig.horarios[0]?.abre ?? "17:00")}`}</p>
 
             <h3 className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-mostarda">
               <Clock className="size-4" aria-hidden="true" />

@@ -41,7 +41,7 @@ export function Footer() {
           </h2>
           <p className="text-sm text-fumaca">{siteConfig.endereco.resumo}</p>
           <p className="mt-1 text-sm text-fumaca">
-            Todos os dias, {formatarHora(siteConfig.horarios[0]?.abre ?? "18:00")} às{" "}
+            Todos os dias, {formatarHora(siteConfig.horarios[0]?.abre ?? "17:00")} às{" "}
             {formatarHora(siteConfig.horarios[0]?.fecha ?? "02:00")}
           </p>
           <div className="mt-4 flex items-center gap-3">
