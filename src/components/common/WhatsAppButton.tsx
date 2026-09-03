@@ -23,13 +23,8 @@ export function WhatsAppButton({
       href={linkWhatsApp(mensagemRapida(contexto))}
       target="_blank"
       rel="noopener noreferrer"
-      onAuxClick={() => undefined}
-      onClick={() => {
-        // fallback: se o navegador bloquear, o usuário ainda vê o número
-        window.setTimeout(() => {
-          if (document.visibilityState === "visible" && !document.hidden) return;
-        }, 1200);
-      }}
+      aria-label={`${label} pelo WhatsApp`}
+
       className={cn(
         "foco-mostarda inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-mostarda px-6 font-bold uppercase tracking-wide text-asfalto shadow-quente transition-transform duration-200 hover:scale-[1.02] active:scale-[0.97]",
         className,
