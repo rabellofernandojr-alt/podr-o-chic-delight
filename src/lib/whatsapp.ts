@@ -55,9 +55,23 @@ export function mensagemRapida(contexto?: string): string {
 }
 
 export function abrirWhatsApp(mensagem: string): boolean {
+  if (typeof window === "undefined") return false;
+  const url = linkWhatsApp(mensagem);
   try {
-    const janela = window.open(linkWhatsApp(mensagem), "_blank", "noopener,noreferrer");
-    return Boolean(janela);
+    const janela = window.open(url, "_blank", "noopener,noreferrer");
+    if (janela) return true;
+  } catch {
+    // ignora e tenta o fallback por âncora
+  }
+  try {
+    const link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    return true;
   } catch {
     return false;
   }
